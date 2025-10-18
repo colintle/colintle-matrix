@@ -5,20 +5,23 @@
 #include <type_traits>
 #include <vector>
 
-namespace matrix_library {
-template<class T>
-class Tensor {
+namespace matrix_library
+{
+    template <class T>
+    class Tensor
+    {
     public:
-        Tensor(const std::vector<std::size_t>& shape);
+        Tensor(const std::vector<std::size_t> &shape);
 
-        T& operator[](const std::vector<std::size_t>& indices);
-        const T& operator[](const std::vector<std::size_t>& indices) const;
+        T &operator[](const std::vector<std::size_t> &indices);
+        const T &operator[](const std::vector<std::size_t> &indices) const;
 
-        const std::vector<size_t>& shape() const;
+        const std::vector<size_t> &shape() const;
         std::size_t size() const;
+
     private:
         void generate_strides();
-        size_t get_flat_index(const std::vector<std::size_t>& indices) const;
+        size_t get_flat_index(const std::vector<std::size_t> &indices) const;
 
         std::vector<T> data_;
         std::vector<size_t> shape_;
@@ -34,7 +37,7 @@ class Tensor {
         // Using an indices vector {1, 2, 3} would yield a flat index of 1*12 + 2*4 + 3*1 = 23
         std::vector<size_t> strides_;
         std::size_t size_;
-};
+    };
 };
 
 #endif

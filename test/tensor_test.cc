@@ -3,7 +3,8 @@
 
 #include "tensor.h"
 
-TEST(TensorTest, ConstructorInitializesShapeAndSize) {
+TEST(TensorTest, ConstructorInitializesShapeAndSize)
+{
     std::vector<std::size_t> shape = {2, 3, 4};
     matrix_library::Tensor<int> tensor(shape);
 
