@@ -1,0 +1,2 @@
+add_library(MatrixLibraryAPI tensor.cc)
+target_include_directories(MatrixLibraryAPI PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

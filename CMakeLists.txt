@@ -1,8 +1,10 @@
 cmake_minimum_required(VERSION 3.14)
-project(matrix_library)
+project(MatrixLibrary)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+enable_testing()
 
 include(FetchContent)
 FetchContent_Declare(
@@ -13,10 +15,5 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-enable_testing()
-
-add_executable(operations_test operations_test.cc)
-target_link_libraries(operations_test GTest::gtest_main)
-
-include(GoogleTest)
-gtest_discover_tests(operations_test)
+add_subdirectory(src)
+add_subdirectory(test)
