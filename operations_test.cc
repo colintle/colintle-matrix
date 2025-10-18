@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-TEST(HelloTest, BasicAssertions) {
+TEST(OperationsTest, BasicAssertions) {
     EXPECT_STREQ("hello", "hello");
     EXPECT_EQ(42, 42);
 }
