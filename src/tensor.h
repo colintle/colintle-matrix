@@ -19,6 +19,10 @@ namespace matrix_library
         const std::vector<size_t> &shape() const;
         std::size_t size() const;
 
+        void set_data(const std::vector<T> &data);
+        void set_data(std::vector<T> &&data);
+        void fill(const T &value);
+
     private:
         void generate_strides();
         size_t get_flat_index(const std::vector<std::size_t> &indices) const;

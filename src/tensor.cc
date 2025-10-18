@@ -82,6 +82,32 @@ namespace matrix_library
         return data_[flat_index];
     }
 
+    template <class T>
+    void Tensor<T>::set_data(const std::vector<T> &data)
+    {
+        if (data.size() != size_)
+        {
+            throw std::invalid_argument("Input data size does not match tensor size.");
+        }
+        data_ = data;
+    }
+
+    template <class T>
+    void Tensor<T>::set_data(std::vector<T> &&data)
+    {
+        if (data.size() != size_)
+        {
+            throw std::invalid_argument("Input data size does not match tensor size.");
+        }
+        data_ = std::move(data);
+    }
+
+    template <class T>
+    void Tensor<T>::fill(const T &value)
+    {
+        std::fill(data_.begin(), data_.end(), value);
+    }
+
     template class Tensor<int>;
     template class Tensor<float>;
     template class Tensor<double>;
