@@ -30,7 +30,6 @@ namespace matrix_library::operations
             for (size_t dim = 0; dim < shape.size(); ++dim)
             {
                 size_t stride = 1;
-                //
                 for (size_t k = dim + 1; k < shape.size(); ++k)
                     stride *= shape[k];
                 idx[dim] = remainder / stride;
