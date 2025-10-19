@@ -9,8 +9,8 @@ namespace matrix_library::operations
 	template <class T>
 	matrix_library::Tensor<T> multiply(const matrix_library::Tensor<T> &a, const matrix_library::Tensor<T> &b)
 	{
-		const auto &ashape = a.shape();
-		const auto &bshape = b.shape();
+		const std::vector<size_t> &ashape = a.shape();
+		const std::vector<size_t> &bshape = b.shape();
 
 		const size_t arank = ashape.size();
 		const size_t brank = bshape.size();
