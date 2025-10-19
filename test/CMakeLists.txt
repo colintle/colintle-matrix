@@ -1,5 +1,9 @@
+include(GoogleTest)
+
 add_executable(TensorTests tensor_test.cc)
 target_link_libraries(TensorTests PRIVATE MatrixLibraryAPI gtest_main)
-
-include(GoogleTest)
 gtest_discover_tests(TensorTests)
+
+add_executable(OperationsAddTests operations_add_test.cc)
+target_link_libraries(OperationsAddTests PRIVATE MatrixLibraryAPI gtest_main)
+gtest_discover_tests(OperationsAddTests)

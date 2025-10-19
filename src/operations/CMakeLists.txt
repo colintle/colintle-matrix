@@ -1,0 +1,2 @@
+add_library(MatrixOperations INTERFACE)
+target_include_directories(MatrixOperations INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
