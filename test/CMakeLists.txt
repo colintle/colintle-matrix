@@ -7,3 +7,7 @@ gtest_discover_tests(TensorTests)
 add_executable(OperationsAddTests operations_add_test.cc)
 target_link_libraries(OperationsAddTests PRIVATE MatrixLibraryAPI gtest_main)
 gtest_discover_tests(OperationsAddTests)
+
+add_executable(OperationsSubtractTests operations_subtract_test.cc)
+target_link_libraries(OperationsSubtractTests PRIVATE MatrixLibraryAPI gtest_main)
+gtest_discover_tests(OperationsSubtractTests)
