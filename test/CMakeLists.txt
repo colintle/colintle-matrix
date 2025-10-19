@@ -19,3 +19,7 @@ gtest_discover_tests(OperationsScaleTests)
 add_executable(OperationsMultiplyTests operations_multiply_test.cc)
 target_link_libraries(OperationsMultiplyTests PRIVATE MatrixLibraryAPI gtest_main)
 gtest_discover_tests(OperationsMultiplyTests)
+
+add_executable(OperationsTransposeTests operations_transpose_test.cc)
+target_link_libraries(OperationsTransposeTests PRIVATE MatrixLibraryAPI gtest_main)
+gtest_discover_tests(OperationsTransposeTests)
