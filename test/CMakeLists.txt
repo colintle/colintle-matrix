@@ -11,3 +11,7 @@ gtest_discover_tests(OperationsAddTests)
 add_executable(OperationsSubtractTests operations_subtract_test.cc)
 target_link_libraries(OperationsSubtractTests PRIVATE MatrixLibraryAPI gtest_main)
 gtest_discover_tests(OperationsSubtractTests)
+
+add_executable(OperationsScaleTests operations_scale_test.cc)
+target_link_libraries(OperationsScaleTests PRIVATE MatrixLibraryAPI gtest_main)
+gtest_discover_tests(OperationsScaleTests)
