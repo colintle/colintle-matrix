@@ -23,3 +23,7 @@ gtest_discover_tests(OperationsMultiplyTests)
 add_executable(OperationsTransposeTests operations_transpose_test.cc)
 target_link_libraries(OperationsTransposeTests PRIVATE MatrixLibraryAPI gtest_main)
 gtest_discover_tests(OperationsTransposeTests)
+
+add_executable(OperationsInverseTests operations_inverse_test.cc)
+target_link_libraries(OperationsInverseTests PRIVATE MatrixLibraryAPI gtest_main)
+gtest_discover_tests(OperationsInverseTests)
