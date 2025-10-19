@@ -1,7 +1,7 @@
 # Matrix Library in C++
 Custom Matrix (up to 2-D) Operations Library By Colin Le
 
-## Supported Matrix Opeerations
+## Supported Matrix Operations
 - Add
 - Subtract
 - Multiplication (Scalar & Dot)
